@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Rechner_Sergej"
+        app:titleTextColor="#FFFFFF" />
+
+
+    <!--25sp text size-->
+
+    <Button
+        android:id="@+id/berechnen"
+        android:layout_width="227dp"
+        android:layout_height="68dp"
+        android:layout_centerInParent="true"
+        android:text="Berechnen"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/wert2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="270dp"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.198">
+
+        <RadioButton
+            android:id="@+id/add"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:text="+" />
+
+        <RadioButton
+            android:id="@+id/sub"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:text="-" />
+
+        <RadioButton
+            android:id="@+id/mul"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:text="*" />
+
+        <RadioButton
+            android:id="@+id/div"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:text="/" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/ms"
+        android:layout_width="74dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="24dp"
+        android:text="MS"
+        app:layout_constraintStart_toEndOf="@+id/berechnen"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/wert2" />
+
+    <Button
+        android:id="@+id/mr"
+        android:layout_width="70dp"
+        android:layout_height="59dp"
+        android:text="MR"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/wert2"
+        app:layout_constraintStart_toEndOf="@+id/ms" />
+
+    <EditText
+        android:id="@+id/wert1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.106" />
+
+    <EditText
+        android:id="@+id/wert2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.313" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" /><!--25sp text size-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
